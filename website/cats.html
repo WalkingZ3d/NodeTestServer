@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CATS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="website.js" defer></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+   
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark justify-content-center" id="top">
+        <div class="container-md d-flex" id="containerNavId">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" id="hamburgerButton">
+        <span class="navbar-toggler-icon"></span>            
+    </button>
+            <div class="collapse navbar-collapse justify-content-center " id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cats.html" id="navItem">Cats</a>
+                    </li>    
+                    <li class="nav-item">
+                      <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="logo" id="logoId"></a>
+                  </li>                 
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dogs.html" id="navItem">Dogs</a>
+                    </li>                 
+                </ul>
+            </div>
+        </div>      
+    </nav> 
+
+  <div class="jumbotron text-center" id="title">
+      <h1 id="titleH1">CATS</h1>
+  </div>
+  <br>  
+ 
+  <div class="container-fluid justify-content-center text-center" id="inpArea" >
+      <div class="row ">
+          <div class="col-sm-12 ">
+            <input type="text" placeholder="Type something..." id="indexInputCats" class="bg-dark text-light form-white form-outline">  
+            <button class="btn-dark" type="button" id="searchBtnCats" onclick="getInputValueCats();">Get Values</button>
+          </div>
+      </div>
+  </div>
+  <br><br>
+  <div class="container text-center" style="font-size: 30px">
+    <div class="row">
+      <div class="col-sm-6">
+        <label>Name: </label>
+        <h4 id="name"></h4>
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <label>Age: </label>
+        <h4 id="age"></h4> 
+      </div>
+    </div>
+  </div> 
+  
+
+  <footer class="mt-auto">
+      <br>
+      <div class="container justify-content-center">
+          <div class="row ">
+              <div class="col-sm-12 ">
+                  <p id="socialsHeader">My Socials</p>
+              </div>
+          </div>
+      </div>
+      <div class="container justify-content-center">
+          <div class="row ">
+              <div class="col-sm-12 ">
+                  <p>
+                      <a href="https://twitter.com/WalkingZ3dd" target="_blank" id="socialButton"><button type="button" class="btn btn-social-icon btn-outline-twitter"><i class="fa fa-twitter"></i></button></a>
+                      <a href="https://github.com/WalkingZ3d?tab=repositories" target="_blank" id="socialButton"><button type="button" class="btn btn-social-icon btn-outline-github"><i class="fa fa-github"></i></button></a>
+                      <a href="https://www.linkedin.com/in/daniel-willis-44b4a7189/" target="_blank" ><button type="button" class="btn btn-social-icon btn-outline-linkedin"><i class="fa fa-linkedin"></i></button></a></p>
+              </div>
+          </div>
+      </div>         
+      <p id="nameEnd">Dan Willis</p>
+  </footer>
+  
+</body>
+</html>
