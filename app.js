@@ -13,7 +13,8 @@ const dogs = [
     {id: 8, name: 'Dog8', age: 11},
     {id: 9, name: 'Dog9', age: 1},
     {id: 10, name: 'Dog10', age: 4},
-    {id: 11, name: 'Dog11', age: 7}    
+    {id: 11, name: 'Dog11', age: 7},
+    {id: 12, name: 'Dog12', age: 9} 
 ]
 
 JSON.stringify(dogs)
