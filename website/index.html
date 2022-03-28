@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dog api</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Dog API</h1>
+        <br>
+        <h2 id="msg"></h2>
+      </div>
+      <br><br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-12">
+            <input type="text" placeholder="Type something..." id="myInput">  
+            <button type="button" onclick="getInputValue();">Get Value</button>  
+          </div>
+      </div>
+      <br><br>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-6">
+            <label>Name: </label>
+            <h4 id="name"></h4>
+          </div>
+          <div class="col-sm-6">
+            <label>Age: </label>
+            <h4 id="age"></h4> 
+          </div>
+        </div>
+      </div>
+      
+    <!-- <script src="index.js"></script> -->
+    <script>
+        async function getDog(endpoint) {
+            let str = "http://localhost:3000"
+            let url = str + endpoint
+
+            const api_url = url
+            const response = await fetch (api_url);
+            const data = await response.json();
+            
+            const{name, age} = data;
+
+            document.getElementById("name").textContent = name
+            document.getElementById("age").textContent = age
+        }
+
+        async function getMsg() {
+            const api_url = "http://localhost:3000"
+            const response = await fetch (api_url);
+            const data = await response.json();
+            console.log(data)
+            document.getElementById("msg").textContent = data[0].msg
+        }
+        getMsg()
+
+        function getInputValue(){
+            let inputVal = document.getElementById("myInput").value;
+            let x = "/dogs/" + inputVal;
+            getDog(x)
+        }
+    </script>
+</body>
+</html>
